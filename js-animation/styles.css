@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+
+.landing {
+    min-height: 100vh;
+    background: url('./photo.jpeg');
+    background-size: cover;
+    padding: 0em 5em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding-left: 10rem;
+    font-size: 1.2rem;
+}
+
+#logo {
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.big-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 2rem;
+    font-family: "Ubuntu Condensed", sans-serif;
+
+}
+
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+}
+
+.intro-text {
+    color: rgb(227, 242, 255);
+    font-family: "Ubuntu Condensed", cursive;
+    font-size: 3rem;
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}
