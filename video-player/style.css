@@ -1,0 +1,86 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(34, 32, 32);
+    height: 100vh;
+}
+
+.container-video {
+    width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(90%);
+    transition: all 0.2s;
+}
+
+.container-video:hover .controls {
+    transform: translateY(0);
+}
+
+.buttons {
+     padding: 5px 10px 10px; /* 5px en haut, 10px gauche/droite, 10px en bas */
+}
+
+.buttons button {
+    background: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+#mute {
+    position: relative;
+    top: -5px;
+    margin: 0 12px; /* 0 haut/bas et 12px gauche/droite */
+}
+
+#play-pause img {
+    width: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.orange-bar {
+    height: 10px;
+    width: 100%;
+    background: #000;
+    cursor: pointer;
+}
+
+.juice {
+    height: 10px;
+    background-color: orangered;
+}
+
+/* Bouton pour passer en plein écran */
+#fullscreen {
+    position: absolute;
+    right: 10px;
+    top: 22px;
+}
+
+#fullscreen img {
+    width: 20px;
+}
+
