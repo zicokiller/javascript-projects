@@ -4,24 +4,32 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 
-getUser("zaub1");
+getUser("zicokiller");
 // Je fetch le user via l'input
 async function getUser(username) {
-  const resp = await fetch(APIURL + username);
-  const respData = await resp.json();
-
-  createUserCard(respData);
+  try {
+    const resp = await fetch(APIURL + username);
+    const respData = await resp.json();
+// Je crée une card avec les user data
+    createUserCard(respData);
+  } catch (error) {
+    console.log(error);
+  }
 
   getRepos(username);
 }
 // Je fetch les Repos du user
 async function getRepos(username) {
-  const resp = await fetch(APIURL + username + "/repos");
-  const respData = await resp.json();
-  console.log(respData);
-  addReposToCard(respData);
+  try {
+    const resp = await fetch(APIURL + username + "/repos");
+    const respData = await resp.json();
+    console.log(respData);
+    addReposToCard(respData);
+  } catch (error) {
+    console.log(error);
+  }
 }
-
+// Je crée une card template string
 function createUserCard(user) {
   const cardHTML = `
         <div class="card">
@@ -45,6 +53,7 @@ function createUserCard(user) {
   main.innerHTML = cardHTML;
 }
 
+// Permet d'ajouter ds la user card tous les repos en créant des balises 'a'
 function addReposToCard(repos) {
   const reposEl = document.getElementById("repos");
   repos.slice(0).forEach((repo) => {
