@@ -20,7 +20,7 @@ const routes = {
 };
 
 /* 3 étapes : 1- on instancie le template avec l'id "templateId"
-              2- on affiche son contenu à l'intérieur de notre app avec "const view"
+              2- on affiche son contenu à l'intérieur de notre app avec 'const view'
               3- "cloneNode(true)" notez que le true est impératif
                  pour afficher l'ensemble du template appelé */
 
@@ -92,7 +92,7 @@ async function createTransaction(user, transaction) {
 // // Global state
 // // ---------------------------------------------------------------------------
 
-/* ici, on centralise ttes les data de l'app ds un objet 'state */
+/* ici, on centralise ttes les data de l'app ds un objet 'state' */
 let state = Object.freeze({
   account: null,
 });

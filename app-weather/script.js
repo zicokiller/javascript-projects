@@ -52,4 +52,5 @@ form.addEventListener("submit", (e) => {
   if (city) {
     getWeatherByCity(city);
   }
+  search.value = "";
 });
